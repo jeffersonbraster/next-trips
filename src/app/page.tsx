@@ -1,9 +1,11 @@
-import Trips from './about/components/Trips'
+"use client";
+
+import { useSession } from "next-auth/react";
 
 export default function Home() {
-  return (
-    <div>
-      <Trips />
-    </div>
-  )
+  const { data: session } = useSession();
+
+  console.log(session);
+
+  return <div></div>;
 }
